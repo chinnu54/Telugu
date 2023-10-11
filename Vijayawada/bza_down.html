@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVIGATION</title>
+    <style>
+        body{
+            background-color: rgb(88,0,0);
+        }
+        
+        /* Style for the button container */
+        .button-container {
+            text-align: center; /* Center the buttons horizontally */
+        }
+
+        /* Style for the buttons */
+        .nav-button {
+            display: inline-block; /* Display buttons side by side */
+            padding: 10px 20px; /* Adjust padding as needed */
+            margin: 5px; /* Add margin between buttons */
+            background-color:skyblue; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+
+        /* Hover effect for buttons */
+        .nav-button:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+        #Services{
+            background-color: #0056b3;
+        }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="button-container">
+        <a href="/index.html" target="vijayawada.html"><button class="nav-button"><b style="color: black;">Home</b></button></a>
+        <select  id="Services"  name="Services" style="height:30px;">
+            
+            
+            <optgroup label="Default"><option value="">select_any_one_service</option></optgroup>
+           <!--select id="MedicalSerives" name="k">
+            <option value="govt.html">Government</option>
+                <option value="pvt.html">Private</option>
+           </select-->
+            <optgroup label="Medical services">
+                <option value="govt.html">Government</option>
+                <option value="pvt.html">Private</option>
+            </optgroup-->
+            
+            
+            <optgroup label="Family Restaurants">
+                <option value="fam1.html">THE GATEWAY HOTEL</option>
+                <option value="fam2.html">Barbeque Nation</option>
+                <option value="fam3.html">Minerva Grand Restaurant</option>
+                <option value="fam4.html">Sarovar Mess</option>
+                <option value="fam5.html">The Oriental Pavilion</option>
+                </optgroup> 
+                
+               <optgroup label="Fast Food Restaurants">
+                <option value="ff1.html">McDonald's</option>
+                <option value="ff2.html">Burger King</option>
+                <option value="ff3.html"> Bamma Restaurant</option>
+                <option value="ff4.html">SSS Idly's</option>
+                <option value="ff5.html">Food Republic</option>
+               </optgroup> 
+            <optgroup label="Groceries Stores">
+                <option value="g1.html">Sree Vijay Durga Rice and Kirana Traders</option>
+                <option value="g2.html">Sri Venkata Krishna Naturals</option>
+                <option value="g3.html">S-Mart</option>
+                <option value="g4.html">Mahendra Dry Fruits And General Store</option>
+                <option value="g5.html">MEE ANGADI</option>
+            </optgroup>
+            <optgroup label="Fuel Stations">
+                <option value="fs1.html">M/s M. Narayana Prasad IndianOil</option>
+                <option value="fs2.html">Indian Oil Petrol Pump</option>
+                <option value="fs3.html">Indian Oil Petrol Bunk</option>
+                <option value="fs4.html">Arunasri Filling Station Hp Petrol Bunk</option>
+                <option value="fs5.html">Indian Oil Petrol and Diesel Filling Station</option>
+            </optgroup>
+            <optgroup label="Tourist Spots">
+                <option value="ts1.html">Undavalli Caves</option>
+                <option value="ts2.html">Sri Durga Malleswara Swamy Varla Devasthanam</option>
+                <option value="ts3.html">Bhavani Island</option>
+                <option value="ts4.html">Prakasam Barrage</option>
+                <option value="ts5.html">Gunadala Matha Shrine</option>
+            </optgroup>
+            
+        </select>
+        <button class="nav-button"><a href="/contact.html" target="_blank"><b style="color: black;">Contact</b></a></button>
+        <script>
+            // Get the select element
+            const selectElement = document.getElementById('Services');
+        
+            // Add an event listener to handle option selection
+            selectElement.addEventListener('change', function () {
+              const selectedValue = selectElement.value;
+        
+              // Check if a valid option (not the default) is selected
+              if (selectedValue !== '') {
+                // Open the selected HTML file in a new tab/window
+                window.open(selectedValue, '_blank');
+              }
+            });
+          </script>
+</div>
+    </nav>
+</body>
+</html>
+

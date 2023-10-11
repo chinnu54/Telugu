@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TeluguRouteFinder</title>
+    <style>
+        /* Style for the buttons */
+        .city-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for buttons */
+        .city-button:hover {
+            background-color: #0056b3;
+            background-repeat: no-repeat;
+        }
+        body{
+            background-image: url('09.jpg');
+        }
+    </style>
+</head>
+<body>
+   <center><h1 style="font-size: 60px;">Big Cities in Andhra Pradesh</h1></center> 
+
+    <div>
+        <a href="#"><button class="city-button" onclick="showCity('Visakhapatnam') ">Visakhapatnam</button></a>
+        <a href="#"><button class="city-button" onclick="showCity('Vijayawada')" >Vijayawada</button></a>
+        <a href="#"><button class="city-button" onclick="showCity('Guntur')">Guntur</button></a>
+        <a href="#"><button class="city-button" onclick="showCity('Nellore')">Nellore</button></a>
+        <a href="#"><button class="city-button" onclick="showCity('Kurnool')">Kurnool</button></a>
+    </div>
+
+    <p id="cityInfo">Click a city button to display more information.</p>
+
+    <script>
+        function showCity(cityName) {
+            //var cityInfoElement = document.getElementById("cityInfo");
+            
+            if(confirm("You selected " + cityName + ".\n Do you want to continue ?"))
+            {
+                if(cityName=="Vijayawada"){
+                window.location.href="Vijayawada/vijayawada.html"}
+                
+                else if(cityName=="Kurnool")
+                {
+                    window.location.href="Kurnool/Kurnool.html"
+                }
+                else if(cityName=="Visakhapatnam")
+                {
+                    window.location.href="Vishakapatnam/Vishakapatnam.html"
+                }
+                else if(cityName=="Nellore")
+                {
+                    window.location.href="Nellore/Nellore.html"
+                }
+                else{
+                    window.location.href="Guntur/Guntur.html"
+                }
+               
+            }
+            else{
+                window.location.href="main.html"
+            }
+            /*cityInfoElement.textContent = "You selected " + cityName + ".";*/
+            // You can add more information or links for each city here.
+        }
+    </script>
+</body>
+</html>
